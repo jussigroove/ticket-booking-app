@@ -20,37 +20,41 @@
     <div id="wrapper">
         <img src="resources/images/cheetah-logo.png" alt="">
         <form action="results.html" method="GET">
-            <div>
+            <div class="grid-col-span-2 radio">
                 <input id="return" name="ticket-type" type="radio" value="return" required>
                 <label for="return">Return</label>
                 <input id="one-way" name="ticket-type" type="radio" value="one-way" required>
                 <label for="one-way">One Way</label>
             </div>
 
+            <div class="grid-col-span-2 pass-grid">
+                <div>
+                    <div id="from-div">
+                        <label for="from">From:</label>
+                        <input id="from" name="from" type="text" required>
+                    </div>
 
-            <div>
-                <div id="from-div">
-                    <label for="from">From:</label>
-                    <input id="from" name="from" type="text" required>
+                    <div id="to-div">
+                        <label for="to">To:</label>
+                        <input id="to" name="to" type="text" required>
+                    </div>
                 </div>
 
-                <div id="to-div">
-                    <label for="to">To:</label>
-                    <input id="to" name="to" type="text" required>
+                <div>
+                    <div id="depart-div">
+                        <label for="departing">Departing:</label>
+                        <input id="departing" name="departing" type="date" required>
+                    </div>
+
+
+                    <div id="return-div">
+                        <label for="returning">Returning:</label>
+                        <input id="returning" name="returning" type="date">
+                    </div>
                 </div>
             </div>
 
 
-            <div id="depart-div">
-                <label for="departing">Departing:</label>
-                <input id="departing" name="departing" type="date" required>
-            </div>
-
-
-            <div id="return-div">
-                <label for="returning">Returning:</label>
-                <input id="returning" name="returning" type="date">
-            </div>
 
 
 
@@ -93,126 +97,139 @@
                 </div>
             </div> -->
 
-            <hr>
-
-            <div id="pass-one">
+            <div id="pass-one" class="grid-col-span-2 pass-grid">
+                <p class="grid-col-span-2">Passenger 1</p>
                 <div>
-                    <p>Passenger 1</p>
-                    <label for="pass-one-fname">First Name:</label>
-                    <input id="pass-one-fname" name="pass-one-fname" type="text">
-                    <label for="pass-one-lname">Last Name:</label>
-                    <input id="pass-one-lname" name="pass-one-lname" type="text">
+                    <div>
+                        <label for="pass-one-fname">First Name:</label>
+                        <input id="pass-one-fname" name="pass-one-fname" type="text" required>
+                    </div>
+                    <div>
+                        <label for="pass-one-lname">Last Name:</label>
+                        <input id="pass-one-lname" name="pass-one-lname" type="text" required>
+                    </div>
                 </div>
 
                 <div>
-                    <p>Gender</p>
-                    <input id="pass-one-male" name="pass-one-gender" type="radio" value="male">
-                    <label for="pass-one-male">Male</label>
-                    <input id="pass-one-female" name="pass-one-gender" type="radio" value="female">
-                    <label for="pass-one-female">Female</label>
+                    <div class="radio">
+                        <span>Gender</span>
+                        <input id="pass-one-male" name="pass-one-gender" type="radio" value="male" required>
+                        <label for="pass-one-male">Male</label>
+                        <input id="pass-one-female" name="pass-one-gender" type="radio" value="female" required>
+                        <label for="pass-one-female">Female</label>
+                    </div>
+                    <div>
+                        <label for="pass-one-age">Age:</label>
+                        <input id="pass-one-age" name="pass-one-age" type="number" min="1" max="150" required>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pass-two" class="grid-col-span-2 pass-grid">
+                <p class="grid-col-span-2">Passenger 2</p>
+                <div>
+                    <div>
+                        <label for="pass-two-fname">First Name:</label>
+                        <input id="pass-two-fname" name="pass-two-fname" type="text" required>
+                    </div>
+                    <div>
+                        <label for="pass-two-lname">Last Name:</label>
+                        <input id="pass-two-lname" name="pass-two-lname" type="text" required>
+                    </div>
                 </div>
 
                 <div>
-                    <label for="pass-one-age">Age:</label>
-                    <input id="pass-one-age" name="pass-one-age" type="number" min="1" max="150">
+                    <div class="radio">
+                        <span>Gender</span>
+                        <input id="pass-two-male" name="pass-two-gender" type="radio" value="male" required>
+                        <label for="pass-two-male">Male</label>
+                        <input id="pass-two-female" name="pass-two-gender" type="radio" value="female" required>
+                        <label for="pass-two-female">Female</label>
+                    </div>
+                    <div>
+                        <label for="pass-two-age">Age:</label>
+                        <input id="pass-two-age" name="pass-two-age" type="number" min="1" max="150" required>
+                    </div>
                 </div>
             </div>
 
-            <hr>
-
-            <div id="pass-two">
+            <div id="pass-three" class="grid-col-span-2 pass-grid">
+                <p class="grid-col-span-2">Passenger 3</p>
                 <div>
-                    <p>Passenger 2</p>
-                    <label for="pass-two-fname">First Name:</label>
-                    <input id="pass-two-fname" name="pass-two-fname" type="text">
-                    <label for="pass-two-lname">Last Name:</label>
-                    <input id="pass-two-lname" name="pass-two-lname" type="text">
-                </div>
-
-                <div>
-                    <p>Gender</p>
-                    <input id="pass-two-male" name="pass-two-gender" type="radio" value="male">
-                    <label for="pass-two-male">Male</label>
-                    <input id="pass-two-female" name="pass-two-gender" type="radio" value="female">
-                    <label for="pass-two-female">Female</label>
-                </div>
-
-                <div>
-                    <label for="pass-two-age">Age:</label>
-                    <input id="pass-two-age" name="pass-two-age" type="number" min="1" max="150">
-                </div>
-            </div>
-
-            <hr>
-
-            <div id="pass-three">
-                <div>
-                    <p>Passenger 3</p>
-                    <label for="pass-three-fname">First Name:</label>
-                    <input id="pass-three-fname" name="pass-three-fname" type="text">
-                    <label for="pass-three-lname">Last Name:</label>
-                    <input id="pass-three-lname" name="pass-three-lname" type="text">
+                    <div>
+                        <label for="pass-three-fname">First Name:</label>
+                        <input id="pass-three-fname" name="pass-three-fname" type="text" required>
+                    </div>
+                    <div>
+                        <label for="pass-three-lname">Last Name:</label>
+                        <input id="pass-three-lname" name="pass-three-lname" type="text" required>
+                    </div>
                 </div>
 
                 <div>
-                    <p>Gender</p>
-                    <input id="pass-three-male" name="pass-three-gender" type="radio" value="male">
-                    <label for="pass-three-male">Male</label>
-                    <input id="pass-three-female" name="pass-three-gender" type="radio" value="female">
-                    <label for="pass-three-female">Female</label>
+                    <div class="radio">
+                        <span>Gender</span>
+                        <input id="pass-three-male" name="pass-three-gender" type="radio" value="male" required>
+                        <label for="pass-three-male">Male</label>
+                        <input id="pass-three-female" name="pass-three-gender" type="radio" value="female" required>
+                        <label for="pass-three-female">Female</label>
+                    </div>
+
+                    <div>
+                        <label for="pass-three-age">Age:</label>
+                        <input id="pass-three-age" name="pass-three-age" type="number" min="1" max="150" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-col-span-2 pass-grid">
+                <div>
+                    <label for="class">Class:</label>
+                    <select id="class" name="class" required>
+                        <option value="economy">Economy</option>
+                        <option value="premium-economy">Premium Economy</option>
+                        <option value="business">Business</option>
+                        <option value="first">First</option>
+                    </select>
+                </div>
+
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input name="email" type="email" required>
                 </div>
 
                 <div>
-                    <label for="pass-three-age">Age:</label>
-                    <input id="pass-three-age" name="pass-three-age" type="number" min="1" max="150">
+                    <label for="mobile">Mobile:</label>
+                    <input name="mobile" type="tel" pattern="[0-9]{10}" required>
+                </div>
+
+                <div>
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="2" cols="23" required></textarea>
+                </div>
+
+                <div>
+                    <label for="dietary-reqs">Dietary Requirements:</label>
+                    <select id="dietary-reqs" name="dietary-reqs" required>
+                        <option value="none">None</option>
+                        <option value="vegetarian">Vegetarian</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="visa">Visa</option>
+                        <option value="amex">American Express</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="discover">Discover</option>
+                    </select>
                 </div>
             </div>
 
-            <hr>
-
-            <div>
-                <label for="class">Class:</label>
-                <select id="class" name="class" required>
-                    <option value="economy">Economy</option>
-                    <option value="premium-economy">Premium Economy</option>
-                    <option value="business">Business</option>
-                    <option value="first">First</option>
-                </select>
-            </div>
 
 
-            <div>
-                <label for="email">Email:</label>
-                <input name="email" type="email" placeholder="Enter your Email address" required>
-            </div>
-
-            <div>
-                <label for="mobile">Mobile:</label>
-                <input name="mobile" type="tel" pattern="[0-9]{10}" required>
-            </div>
-
-            <div>
-                <label for="address">Address:</label>
-                <textarea id="address" name="address" rows="2" cols="30" required></textarea>
-            </div>
-
-            <div>
-                <label for="dietary-reqs">Dietary Requirements:</label>
-                <select id="dietary-reqs" name="dietary-reqs" required>
-                    <option value="none">None</option>
-                    <option value="vegetarian">Vegetarian</option>
-                </select>
-            </div>
-
-            <div>
-                <label for="payment-method">Payment Method:</label>
-                <select id="payment-method" name="payment-method" required>
-                    <option value="visa">Visa</option>
-                    <option value="amex">American Express</option>
-                    <option value="mastercard">Mastercard</option>
-                    <option value="discover">Discover</option>
-                </select>
-            </div>
             <input type="submit" value="BOOK NOW">
         </form>
     </div>
