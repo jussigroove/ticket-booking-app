@@ -9,6 +9,48 @@ form {
     padding: 30px;
 }
 
+.message-space i {
+    position: absolute;
+    top: 36px;
+    left: 212px;
+    visibility: hidden;
+}
+
+.message-space small {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    font-size: .8em;
+}
+
+.message-space {
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.message-space.success input {
+    border: 2px solid #2ecc71;
+}
+
+.message-space.error input {
+    border: 2px solid #e74c3c;
+}
+
+.message-space.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.message-space.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.message-space.error small {
+    color: #e74c3c;
+    visibility: visible;
+}
+
 .grid-col-span-2 {
     grid-column: span 2;
 }
@@ -24,10 +66,12 @@ form {
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 2%;
     padding: 20px 8px;
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
 .pass-grid .radio {
-    margin-bottom: 4px;
+    margin-bottom: 26px;
 }
 
 label {
@@ -45,15 +89,12 @@ span {
     font-weight: 700;
 }
 
-html {
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.2em;
-}
-
 body {
     background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('../images/cheetah-cloud.jpg');
     background-size: cover;
     background-position: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2em;
 }
 
 #wrapper {
@@ -75,6 +116,32 @@ img {
     display: inline-block;
 }
 
+#depart-div {
+    padding-bottom: 22px;
+}
+
 #return-div {
     display: none;
+}
+
+.air-cheetah h1 {
+    font-family: 'Rubik Moonrocks', cursive;
+    color: #ffb825;
+    letter-spacing: .2rem;
+    font-size: 2.2em;
+}
+
+.air-cheetah {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4));
+    text-align: center;
+    position: relative;
+    top: -50px;
+}
+
+.submit-btn {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4));
+    color: #ffb825;
+    font-family: 'Rubik Moonrocks', cursive;
+    letter-spacing: .2rem;
+    font-size: 1.4em;
 }
