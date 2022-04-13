@@ -16,6 +16,9 @@ const passTwoFnameInput = document.getElementById('pass-two-fname');
 const passTwoLnameInput = document.getElementById('pass-two-lname');
 const passThreeFnameInput = document.getElementById('pass-three-fname');
 const passThreeLnameInput = document.getElementById('pass-three-lname');
+const passOneAgeInput = document.getElementById('pass-one-age');
+const passTwoAgeInput = document.getElementById('pass-two-age');
+const passThreeAgeInput = document.getElementById('pass-three-age');
 
 
 
@@ -47,6 +50,9 @@ form.addEventListener('submit', e => {
     const passTwoLnameValue = passTwoLnameInput.value.trim();
     const passThreeFnameValue = passThreeFnameInput.value.trim();
     const passThreeLnameValue = passThreeLnameInput.value.trim();
+    const passOneAgeValue = passOneAgeInput.value;
+    const passTwoAgeValue = passTwoAgeInput.value;
+    const passThreeAgeValue = passThreeAgeInput.value;
 
     if (fromValue === '') {
         fromInput.focus();
@@ -143,6 +149,26 @@ form.addEventListener('submit', e => {
         setSuccess(passThreeLnameInput);
     }
 
+    if (passOneAgeValue === '') {
+        passOneAgeInput.focus();
+        setError(passOneAgeInput, 'This field cannot be empty');
+    } else {
+        setSuccess(passOneAgeInput);
+    }
+
+    if (passTwoAgeValue === '') {
+        passTwoAgeInput.focus();
+        setError(passTwoAgeInput, 'This field cannot be empty');
+    } else {
+        setSuccess(passTwoAgeInput);
+    }
+
+    if (passThreeAgeValue === '') {
+        passThreeAgeInput.focus();
+        setError(passThreeAgeInput, 'This field cannot be empty');
+    } else {
+        setSuccess(passThreeAgeInput);
+    }
 });
 
 typeOneWay.onchange = () => {
